@@ -65,17 +65,17 @@ public class CanReadFileFilterTest extends BaseFilterTest {
         testDir = getTestDir(CanReadFileFilterTest.class.getName());
 
         writeableFile = new File(testDir, WRITEABLE);
-        writeableFileInfo = createFileSelectInfo(writeableFile);
+        writeableFileInfo = createFSI(writeableFile);
         FileUtils.touch(writeableFile);
 
         readOnlyFile = new File(testDir, READONLY);
-        readOnlyFileInfo = createFileSelectInfo(readOnlyFile);
+        readOnlyFileInfo = createFSI(readOnlyFile);
         FileUtils.touch(readOnlyFile);
         readOnlyFile.setReadable(true);
         readOnlyFile.setWritable(false);
 
         notExistingFile = new File(testDir, "not-existing-file.txt");
-        notExistingFileInfo = createFileSelectInfo(notExistingFile);
+        notExistingFileInfo = createFSI(notExistingFile);
 
         zipFile = new File(getTempDir(), CanReadFileFilterTest.class.getName() + ".zip");
         Utils4J.zipDir(testDir, "", zipFile);

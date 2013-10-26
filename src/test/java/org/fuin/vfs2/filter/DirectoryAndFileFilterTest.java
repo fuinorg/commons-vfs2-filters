@@ -69,14 +69,14 @@ public class DirectoryAndFileFilterTest extends BaseFilterTest {
 
         dir = new File(testDir, DIR);
         dir.mkdir();
-        dirInfo = createFileSelectInfo(dir);
+        dirInfo = createFSI(dir);
 
         file = new File(dir, FILE);
         FileUtils.touch(file);
-        fileInfo = createFileSelectInfo(file);
+        fileInfo = createFSI(file);
 
         notExistingFile = new File(testDir, "not-existing-file.txt");
-        notExistingFileInfo = createFileSelectInfo(notExistingFile);
+        notExistingFileInfo = createFSI(notExistingFile);
 
         zipFile = new File(getTempDir(), DirectoryAndFileFilterTest.class.getName() + ".zip");
         Utils4J.zipDir(testDir, "", zipFile);

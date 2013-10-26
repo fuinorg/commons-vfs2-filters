@@ -40,7 +40,7 @@ public abstract class BaseFilterTest {
      * 
      * @return File selct info.
      */
-    protected static FileSelectInfo createFileSelectInfo(final File file) {
+    protected static FileSelectInfo createFSI(final File file) {
         try {
             final FileSystemManager fsManager = VFS.getManager();
             final FileObject fileObject = fsManager.toFileObject(file);

@@ -130,7 +130,7 @@ public class AndFileFilterTest extends BaseFilterTest {
     @Test
     public void testAccept() {
 
-        FileSelectInfo any = createFileSelectInfo(new File("anyfile"));
+        FileSelectInfo any = createFSI(new File("anyfile"));
 
         // Empty
         assertThat(new AndFileFilter().accept(any)).isFalse();

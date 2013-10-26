@@ -130,7 +130,7 @@ public class OrFileFilterTest extends BaseFilterTest {
     @Test
     public void testAccept() {
 
-        FileSelectInfo any = createFileSelectInfo(new File("anyfile"));
+        FileSelectInfo any = createFSI(new File("anyfile"));
 
         // Empty
         assertThat(new OrFileFilter().accept(any)).isFalse();

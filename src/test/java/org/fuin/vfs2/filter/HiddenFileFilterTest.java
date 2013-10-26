@@ -63,15 +63,15 @@ public class HiddenFileFilterTest extends BaseFilterTest {
 
         visibleFile = new File(testDir, "visible.txt");
         FileUtils.touch(visibleFile);
-        visibleFileInfo = createFileSelectInfo(visibleFile);
+        visibleFileInfo = createFSI(visibleFile);
 
         hiddenFile = new File(testDir, "hidden.txt");
         // TODO xxx In Java 6 there is no way to hide a file
         // hiddenFile.setVisible(false);
-        hiddenFileInfo = createFileSelectInfo(hiddenFile);
+        hiddenFileInfo = createFSI(hiddenFile);
 
         notExistingFile = new File(testDir, "not-existing-file.txt");
-        notExistingFileInfo = createFileSelectInfo(notExistingFile);
+        notExistingFileInfo = createFSI(notExistingFile);
 
         // Zip the test directory
         zipFile = new File(getTempDir(), HiddenFileFilterTest.class.getName() + ".zip");

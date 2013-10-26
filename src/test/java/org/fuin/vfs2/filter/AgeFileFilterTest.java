@@ -72,19 +72,19 @@ public class AgeFileFilterTest extends BaseFilterTest {
         oldFile = new File(testDir, "old.txt");
         FileUtils.touch(oldFile);
         oldFile.setLastModified(TWO_DAYS_AGO);
-        oldFileInfo = createFileSelectInfo(oldFile);
+        oldFileInfo = createFSI(oldFile);
 
         // Reference file
         currentFile = new File(testDir, "current.txt");
         FileUtils.touch(currentFile);
         currentFile.setLastModified(NOW);
-        currentFileInfo = createFileSelectInfo(currentFile);
+        currentFileInfo = createFSI(currentFile);
 
         // Set the file's time stamp two days into the future
         newFile = new File(testDir, "new.txt");
         FileUtils.touch(newFile);
         newFile.setLastModified(TWO_DAYS_LATER);
-        newFileInfo = createFileSelectInfo(newFile);
+        newFileInfo = createFSI(newFile);
 
         // Zip the test directory
         zipFile = new File(getTempDir(), AgeFileFilterTest.class.getName() + ".zip");

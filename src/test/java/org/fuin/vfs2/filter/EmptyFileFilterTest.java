@@ -71,23 +71,23 @@ public class EmptyFileFilterTest extends BaseFilterTest {
 
         notEmptyFile = new File(testDir, "full.txt");
         FileUtils.write(notEmptyFile, "whatever");
-        notEmptyFileInfo = createFileSelectInfo(notEmptyFile);
+        notEmptyFileInfo = createFSI(notEmptyFile);
 
         emptyFile = new File(testDir, "empty.txt");
         FileUtils.touch(emptyFile);
-        emptyFileInfo = createFileSelectInfo(emptyFile);
+        emptyFileInfo = createFSI(emptyFile);
 
         notEmptyDir = new File(testDir, "full-dir");
         notEmptyDir.mkdir();
-        notEmptyDirInfo = createFileSelectInfo(notEmptyDir);
+        notEmptyDirInfo = createFSI(notEmptyDir);
         FileUtils.touch(new File(notEmptyDir, "foobar.txt"));
 
         emptyDir = new File(testDir, "empty-dir");
         emptyDir.mkdir();
-        emptyDirInfo = createFileSelectInfo(emptyDir);
+        emptyDirInfo = createFSI(emptyDir);
 
         notExistingFile = new File(testDir, "not-existing-file.txt");
-        notExistingFileInfo = createFileSelectInfo(notExistingFile);
+        notExistingFileInfo = createFSI(notExistingFile);
 
         // Zip the test directory
         zipFile = new File(getTempDir(), EmptyFileFilterTest.class.getName() + ".zip");
