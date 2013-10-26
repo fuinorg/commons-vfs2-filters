@@ -105,10 +105,10 @@ public class AgeFileFilterTest extends BaseFilterTest {
         oldFile = null;
 
         zipFileObj.close();
-        // FileUtils.deleteQuietly(zipFile);
+        FileUtils.deleteQuietly(zipFile);
         zipFile = null;
 
-        // FileUtils.deleteDirectory(testDir);
+        FileUtils.deleteDirectory(testDir);
         testDir = null;
     }
 
