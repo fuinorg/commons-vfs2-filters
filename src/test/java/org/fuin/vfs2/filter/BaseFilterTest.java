@@ -96,7 +96,7 @@ public abstract class BaseFilterTest {
     protected void assertContains(final FileObject[] files, final String... filenames) {
         for (String filename : filenames) {
             if (!find(files, filename)) {
-                fail("File '" + filename + "' nout found in: " + Arrays.asList(files));
+                fail("File '" + filename + "' not found in: " + Arrays.asList(files));
             }
         }
     }
