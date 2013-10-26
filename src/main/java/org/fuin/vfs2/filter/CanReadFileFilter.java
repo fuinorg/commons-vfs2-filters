@@ -29,8 +29,9 @@ import org.apache.commons.vfs2.FileSystemException;
  * <i>readable</i> files:
  * 
  * <pre>
- * File dir = new File(&quot;.&quot;);
- * String[] files = dir.list(CanReadFileFilter.CAN_READ);
+ * FileSystemManager fsManager = VFS.getManager();
+ * FileObject dir = fsManager.toFileObject(new File(&quot;.&quot;));
+ * FileObject[] files = dir.findFiles(new FileFilterSelector(CanReadFileFilter.CAN_READ));
  * for (int i = 0; i &lt; files.length; i++) {
  *     System.out.println(files[i]);
  * }
@@ -41,8 +42,9 @@ import org.apache.commons.vfs2.FileSystemException;
  * <i>un-readable</i> files:
  * 
  * <pre>
- * File dir = new File(&quot;.&quot;);
- * String[] files = dir.list(CanReadFileFilter.CANNOT_READ);
+ * FileSystemManager fsManager = VFS.getManager();
+ * FileObject dir = fsManager.toFileObject(new File(&quot;.&quot;));
+ * FileObject[] files = dir.findFiles(new FileFilterSelector(CanReadFileFilter.CANNOT_READ));
  * for (int i = 0; i &lt; files.length; i++) {
  *     System.out.println(files[i]);
  * }
@@ -53,8 +55,9 @@ import org.apache.commons.vfs2.FileSystemException;
  * <i>read-only</i> files:
  * 
  * <pre>
- * File dir = new File(&quot;.&quot;);
- * String[] files = dir.list(CanReadFileFilter.READ_ONLY);
+ * FileSystemManager fsManager = VFS.getManager();
+ * FileObject dir = fsManager.toFileObject(new File(&quot;.&quot;));
+ * FileObject[] files = dir.findFiles(new FileFilterSelector(CanReadFileFilter.READ_ONLY));
  * for (int i = 0; i &lt; files.length; i++) {
  *     System.out.println(files[i]);
  * }
