@@ -112,6 +112,7 @@ public class SuffixFileFilter implements FileFilter, Serializable {
      * 
      * @param fileInfo
      *            the File to check
+     * 
      * @return true if the filename ends with one of our suffixes
      */
     @Override
