@@ -56,7 +56,7 @@ import org.apache.commons.vfs2.FileSystemException;
  * <b>N.B.</b> For read-only files, use <code>CanReadFileFilter.READ_ONLY</code>.
  * 
  * @author This code was originally ported from Apache Commons IO File Filter
- * @see http://commons.apache.org/proper/commons-io/
+ * @see "http://commons.apache.org/proper/commons-io/"
  */
 public class CanWriteFileFilter implements FileFilter, Serializable {
 

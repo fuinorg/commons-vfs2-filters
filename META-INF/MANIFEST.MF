@@ -5,7 +5,7 @@ Bundle-DocURL: http://www.fuin.org/
 Bundle-License: http://www.fsf.org/licensing/licenses/lgpl.html
 Bundle-ManifestVersion: 2
 Bundle-Name: commons-vfs2-filters
-Bundle-SymbolicName: org.apache.commons.vfs2-filters
+Bundle-SymbolicName: org.fuin.commons-vfs2-filters
 Bundle-Vendor: Future Invent Informationsmanagement GmbH, Hamburg (Germa
  ny)
 Bundle-Version: 0.1.0.SNAPSHOT

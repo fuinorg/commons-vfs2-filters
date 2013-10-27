@@ -32,7 +32,7 @@ import org.apache.commons.vfs2.FileSelectInfo;
  * file filter list stops when the first filter returns {@code true}.
  * 
  * @author This code was originally ported from Apache Commons IO File Filter
- * @see http://commons.apache.org/proper/commons-io/
+ * @see "http://commons.apache.org/proper/commons-io/"
  */
 public class OrFileFilter implements FileFilter, ConditionalFileFilter, Serializable {
 

@@ -33,7 +33,7 @@ import java.io.Serializable;
  * class to compare filenames.
  * 
  * @author This code was originally ported from Apache Commons IO File Filter
- * @see http://commons.apache.org/proper/commons-io/
+ * @see "http://commons.apache.org/proper/commons-io/"
  */
 public final class IOCase implements Serializable {
 
